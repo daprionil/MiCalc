@@ -37,7 +37,7 @@ function selectOperacion(op) {
     operacion = op.toString();
     operaAnterior = operaActual;
     operaActual = '';
-}
+};
 
 function calcular() {
     var calculo;
@@ -51,11 +51,11 @@ function calcular() {
         case '-':
             calculo = anterior - actual;
             break;
-        case 'x':
-            calculo = anterior * actual;
-            break;
         case '/':
             calculo = anterior / actual;
+            break;
+        case 'x':
+            calculo = anterior * actual;
             break;
         default:
             return;
@@ -63,12 +63,12 @@ function calcular() {
     operaActual = calculo;
     operacion = undefined;
     operaAnterior = '';
-}
+};
 
 function agregarNumero(num) {
     operaActual = operaActual.toString() + num.toString();
     actualizarDisplay();
-}
+};
 
 function actualizarDisplay() {
     result.value = operaActual;
